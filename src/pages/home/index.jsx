@@ -1,9 +1,12 @@
+import Topbar from './components/topbar'
+
 const index = () => {
 
   return (
-    <div>
+    <>
+      <Topbar />
       <div>Home</div>
-    </div>
+    </>
   )
 };
 
