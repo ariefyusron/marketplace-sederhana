@@ -14,6 +14,7 @@ export const Image = styled.img`
   width: 100%;
   height: 136px;
   background-color: grey;
+  object-fit: cover;
 `;
 
 export const WrapDesc = styled.div`
