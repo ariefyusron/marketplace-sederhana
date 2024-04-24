@@ -39,3 +39,14 @@ export const Price = styled.p`
   color: #000000;
   margin: 0;
 `;
+
+export const WrapButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const ButtonAdd = styled.button`
+  background-color: green;
+  margin-bottom: 8px;
+  margin-right: 8px;
+`;

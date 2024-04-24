@@ -1,27 +1,22 @@
 import Topbar from '../../components/topbar'
+import useProductStore from '../../stores/product-store';
 
-import { CardStyled, Container } from './styles'
+import { CardStyled, Container, TextEmpty } from './styles'
 
 const index = () => {
+  const cart = useProductStore(state => state.cart)
 
   return (
     <>
       <Topbar title="Cart" back />
 
       <Container>
-        <CardStyled
-          image=''
-          label='Black Winter...'
-          desc='Autumn And Winter Casual cotton-padded jacket...'
-          price={5000}
-        />
-
-        <CardStyled
-          image=''
-          label='Black Winter...'
-          desc='Autumn And Winter Casual cotton-padded jacket...'
-          price={5000}
-        />
+        {cart.length === 0 ? <TextEmpty>Tidak ada product</TextEmpty> : cart.map((item, index) => (
+          <CardStyled
+            key={String(index)}
+            {...item}
+          />
+        ))}
       </Container>
     </>
   )
