@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({ back }) => back ? 'flex-start' : 'space-between'};
   align-items: center;
   padding: 0 16px;
   box-sizing: border-box;
